@@ -63,6 +63,16 @@
             transform: scaleX(1);
             transform-origin: bottom left;
         }
+
+        /* Hero Background Image */
+        #home {
+            position: relative;
+            /* Dark gradient overlay, then the image URL. This ensures text readability. */
+            background-image: linear-gradient(rgba(3, 7, 18, 0.7), rgba(3, 7, 18, 0.9)), url('OrganicFarm.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -127,7 +137,8 @@
 
             <!-- Hero Section -->
             <section id="home" class="min-h-screen flex items-center justify-center text-center -mt-20">
-                <div class="py-20">
+                <!-- Add relative z-10 here to ensure content is above the background overlay -->
+                <div class="py-20 relative z-10">
                     <h1 class="hero-glow text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6">
                         Earth. Evolved.
                     </h1>
@@ -363,3 +374,4 @@
     </script>
 </body>
 </html>
+
